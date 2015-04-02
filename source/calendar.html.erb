@@ -1,9 +1,72 @@
 ---
 title: Friend Ranch Calendar
+calendar:
+  jul26:
+  jul27:
+  jul28:
+    - "Friend Ranch opens for 2015"
+    - 9 spots available
+    - Horace Staying
+  jul29:
+    - 9 spots available
+    - Horace Staying
+  jul30:
+    - 9 spots available
+    - Horace Staying
+  jul31:
+    - 9 spots available
+    - Horace Staying
+  aug1:
+    - 9 spots available
+    - Horace Staying
+  aug2:
+    - 9 spots available
+    - Horace Staying
+  aug3:
+    - 9 spots available
+    - Horace Staying
+  aug4:
+    - 9 spots available
+    - Horace Staying
+  aug5:
+    - 9 spots available
+    - Horace Staying
+  aug6:
+    - 9 spots available
+    - Horace Staying
+  aug7:
+    - 9 spots available
+    - Horace Staying
+  aug8:
+    - 9 spots available
+    - Horace Staying
+  aug9:
+    - 9 spots available
+    - Horace Staying
+    - "Everybody must leave :("
+  aug10:
+  aug11:
+  aug12:
+  aug13:
+  aug14:
+  aug15:
 ---
 
 <h1>Who's staying and when</h1>
 
+<%# Sun, July 26 - Sat Aug 15; 3 weeks of 7 nights / piece %>
+<% days = (26..31).map { |i| "Jul #{i}" } + (1..15).map { |i| "Aug #{i}" } %>
+<% days.each_slice(7).each do |week| %>
+  <ul>
+    <% week.each do |day| %>
+      <p><b><%= day %>:</b></p>
+      <% events = current_page.data.calendar[day.split.join.downcase].to_a %>
+      <% events.reject(&:empty?).each do |event| %>
+        <p><%= event %></p>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
 <div class="calendar">
   <h2>Horace will be here all week :)</h2>
 </div><!-- .welcome -->
