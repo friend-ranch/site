@@ -75,4 +75,5 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
+  deploy.remote = "git@github.com:friend-ranch/site.git"
 end

@@ -41,8 +41,6 @@ calendar:
     - 9 spots available
     - Horace Staying
   aug9:
-    - 9 spots available
-    - Horace Staying
     - "Everybody must leave :("
   aug10:
   aug11:
@@ -54,6 +52,7 @@ calendar:
 
 <h1>Who's staying and when</h1>
 
+<div class="calendar">
 <%# Sun, July 26 - Sat Aug 15; 3 weeks of 7 nights / piece %>
 <% days = (26..31).map { |i| "Jul #{i}" } + (1..15).map { |i| "Aug #{i}" } %>
 <% days.each_slice(7).each do |week| %>
@@ -67,6 +66,4 @@ calendar:
     <% end %>
   </ul>
 <% end %>
-<div class="calendar">
-  <h2>Horace will be here all week :)</h2>
 </div><!-- .welcome -->
