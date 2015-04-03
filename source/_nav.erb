@@ -3,8 +3,9 @@
     <h1>friend ranch 2015</h1>
     <ul>
       <li <%= "class='active'" if current_page.data["nav_active"] == "faq" %>><a href="/">faq</a></li>
-      <li><a href="/getting-there">how do i get there?</a></li>
-      <li><a href="/calendar">when can i come?</a></li>
+      <li <%= "class='active'" if current_page.data["nav_active"] == "travel" %>><a href="/travel">how do i get there?</a></li>
+      <li <%= "class='active'" if current_page.data["nav_active"] == "calendar" %>><a href="/calendar">when can i come?</a></li>
+      <li <%= "class='active'" if current_page.data["nav_active"] == "ranch" %>><a href="/ranch">ze ranch</a></li>
     </ul>
   </div>
 </nav>
