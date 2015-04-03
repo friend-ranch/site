@@ -8,6 +8,7 @@ a:hover {
 }
 a:visited { color: $link; }
 
+
 body {
   font-family: $font-stack;
   color: $dark;
@@ -20,6 +21,7 @@ nav {
   li.active {
     font-weight: bold;
   }
+  h1.site-header { margin-top: 10px; }
 }
 
 span.accent {
