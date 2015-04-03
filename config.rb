@@ -77,6 +77,6 @@ activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = :master
   deploy.build_before = true
-  deploy.remote = :origin
+  deploy.remote = "git@github.com:friend-ranch/friend-ranch.github.io.git"
 end
 activate :directory_indexes
