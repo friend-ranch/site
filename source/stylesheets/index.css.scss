@@ -1,4 +1,7 @@
 @import 'settings';
+::selection { background: $selection; }
+::-moz-selection { background: $selection; }
+
 a { color: $link; }
 a:hover {
   background-color: $highlight;
