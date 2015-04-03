@@ -76,5 +76,7 @@ end
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = :master
+  deploy.build_before = true
+  deploy.remote = :origin
 end
 activate :directory_indexes
