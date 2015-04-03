@@ -1,0 +1,50 @@
+/* line 2, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+a {
+  color: red; }
+
+/* line 3, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+a:hover {
+  background-color: yellow; }
+
+/* line 6, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+a:visited {
+  color: red; }
+
+/* line 8, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+body {
+  font-family: Courier, serif;
+  color: #262626; }
+
+/* line 14, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+nav ul {
+  margin: 10px; }
+
+/* line 19, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+span.accent {
+  color: red; }
+
+/* line 25, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+.calendar .day.inactive {
+  color: gray; }
+  /* line 27, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+  .calendar .day.inactive .head {
+    border-bottom: 1px solid gray; }
+/* line 31, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+.calendar .day {
+  width: 12%;
+  margin: 5px 3px;
+  height: 150px;
+  padding: 7px;
+  background-color: #cccccc; }
+  /* line 37, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+  .calendar .day .head {
+    border-style: solid;
+    border-bottom: 1px solid #262626; }
+  /* line 42, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+  .calendar .day .events p {
+    margin: 6px 0px;
+    font-size: 12px; }
+
+/* line 51, /Users/worace/code/friend_ranch/source/stylesheets/index.css.scss */
+.faq li {
+  margin-bottom: 10px; }
