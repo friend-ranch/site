@@ -1,11 +1,23 @@
 @import 'settings';
-/*nav*/
-nav {
+a { color: $link; }
+a:hover {
+  background-color: $highlight;
 }
+a:visited { color: $link; }
 
 body {
   font-family: $font-stack;
   color: $dark;
+}
+
+nav {
+  ul {
+    margin: 10px;
+  }
+}
+
+span.accent {
+  color: $link;
 }
 .calendar {
   .week {
