@@ -6,10 +6,13 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "grid", "normalize", "all", "index" %>
     <%= javascript_include_tag  "all" %>
   </head>
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div class="container12">
+      <%= partial "nav" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

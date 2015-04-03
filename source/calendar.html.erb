@@ -4,44 +4,46 @@ calendar:
   jul26:
   jul27:
   jul28:
-    - "Friend Ranch opens for 2015"
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
+    other: "Friend Ranch opens for 2015 :)"
   jul29:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   jul30:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   jul31:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug1:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug2:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug3:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug4:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug5:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug6:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug7:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug8:
-    - 9 spots available
-    - Horace Staying
+    available: "open spots: 9"
+    staying: "los guests: worace"
   aug9:
-    - "Everybody must leave :("
+    available: "open spots: 9"
+    staying: "los guests: worace"
+    other: "Everybody must leave :("
   aug10:
   aug11:
   aug12:
@@ -50,20 +52,34 @@ calendar:
   aug15:
 ---
 
-<h1>Who's staying and when</h1>
+<div class="row">
+  <h1>Who's staying and when</h1>
+</div>
 
-<div class="calendar">
 <%# Sun, July 26 - Sat Aug 15; 3 weeks of 7 nights / piece %>
 <% days = (26..31).map { |i| "Jul #{i}" } + (1..15).map { |i| "Aug #{i}" } %>
+<div class="calendar">
 <% days.each_slice(7).each do |week| %>
-  <ul>
-    <% week.each do |day| %>
-      <p><b><%= day %>:</b></p>
-      <% events = current_page.data.calendar[day.split.join.downcase].to_a %>
-      <% events.reject(&:empty?).each do |event| %>
-        <p><%= event %></p>
+  <div class="row">
+    <ul class="week">
+      <% week.each do |day| %>
+        <% slimday = day.split.join.downcase %>
+        <% if current_page.data.calendar[slimday] %>
+          <li class="day active column2">
+            <p class="head"><b><%= day %></b></p>
+            <div class="events">
+                <% current_page.data.calendar[slimday].each do |type, event| %>
+                  <p class="events-<%=type%>"><%= event %></p>
+                <% end %>
+            </div>
+          </li>
+        <% else %>
+          <li class="day inactive column2">
+            <p class="head"><b><%= day %></b></p>
+          </li>
+        <% end %>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 <% end %>
 </div><!-- .welcome -->

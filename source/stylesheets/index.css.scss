@@ -1,0 +1,42 @@
+@import 'settings';
+/*nav*/
+nav {
+}
+
+body {
+  font-family: $font-stack;
+  color: $dark;
+}
+.calendar {
+  .week {
+  }
+  .day.inactive {
+    color: $med;
+    .head {
+      border-bottom: 1px solid $med;
+    }
+  }
+  .day {
+    width: 12%;
+    margin: 5px 3px;
+    height: 150px;
+    padding: 7px;
+    background-color: $light-gray;
+    .head {
+      border-style: solid;
+      border-bottom: 1px solid $dark;
+    }
+    .events {
+      p {
+        margin: 6px 0px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.faq {
+  li {
+    margin-bottom: 10px;
+  }
+}
