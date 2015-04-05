@@ -7,5 +7,18 @@
       font-size: 24px;
     }
   }
+
+  .calendar {
+    padding: 10px 0px;
+    .week {
+      margin-bottom: 20px;
+    }
+    .day {
+      width: 100%;
+    }
+    .day.inactive {
+      display: none;
+    }
+  }
 }
 

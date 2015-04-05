@@ -57,15 +57,16 @@ calendar:
 
 <%# Sun, July 26 - Sat Aug 15; 3 weeks of 7 nights / piece %>
 <% days = (26..31).map { |i| "Jul #{i}" } + (1..15).map { |i| "Aug #{i}" } %>
+<% dotw = "smtwtfs".chars %>
 <div class="calendar">
 <% days.each_slice(7).each do |week| %>
   <div class="row">
     <ul class="week">
-      <% week.each do |day| %>
+      <% week.each_with_index do |day, i| %>
         <% slimday = day.split.join.downcase %>
         <% if current_page.data.calendar[slimday] %>
           <li class="day active column2">
-            <p class="head"><b><%= day %></b></p>
+            <p class="head"><b><%= day %></b> (<%= dotw[i] %>)</p>
             <div class="events">
                 <% current_page.data.calendar[slimday].each do |type, event| %>
                   <p class="events-<%=type%>"><%= event %></p>
