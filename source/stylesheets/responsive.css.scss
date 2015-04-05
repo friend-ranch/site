@@ -1,6 +1,6 @@
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   li, p {
-    font-size: 20px;
+    font-size: 18px;
   }
   nav {
     li {
@@ -14,7 +14,15 @@
       margin-bottom: 20px;
     }
     .day {
-      width: 100%;
+      width: 94%;
+      .head {
+        font-size: 24px;
+      }
+      .events {
+        p {
+          font-size: 18px;
+        }
+      }
     }
     .day.inactive {
       display: none;
